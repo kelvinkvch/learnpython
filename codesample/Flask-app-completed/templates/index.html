@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lorem Ipsum Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <style>
+        .alert {
+          background: rgb(61, 107, 157);
+          padding: 1rem;
+          border-radius: 5px;
+          color: white;
+          margin: 1rem;
+        }
+      </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Lorem Ipsum Generator</h3>
+        </div>
+
+        <div class="container">
+            <form action="/ipsum" method="POST">
+                <label for="Length">Length</label>
+                <input
+                    type="text"
+                    placeholder="Enter a number"
+                    class="u-full-width"
+                    name="num"
+                />
+
+                <label for="Output Format">Output Format</label>
+                <select class="u-full-width" name="output format">
+                    <option value="Word(s)">Word</option>
+                    <option value="Paragraph(s)">Paragraph</option>
+                </select>
+        
+                <input type="submit" value="Generate" id="generate_btn" />
+                <br />
+                <div class="alert">
+                  {{ generated_ipsum }}
+                </div>
+            </form>
+        </div>
+    </body>
+</html>  
